@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookMyRajshree — Acquisition Plan</title>
+<style>
+:root{--gold:#C9922A;--gold-light:#F0C96A;--gold-pale:#FDF6E3;--navy:#0F1C3F;--navy-mid:#1A2E5A;--cream:#FEFCF6;--text:#1A1A1A;--muted:#5A5A5A;--border:#E8DFC8;--success:#1D6B3A;--success-bg:#E8F5EE;--warn:#8B4A0A;--warn-bg:#FEF0DC;--info:#1A3D6B;--info-bg:#E6EEF8;--r:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:var(--cream);color:var(--text);font-size:14px;line-height:1.7}
+.hdr{background:var(--navy);color:#fff;padding:32px 40px 28px;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;top:-40px;right:-40px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(201,146,42,.2)}
+.htag{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px}
+.htitle{font-size:28px;font-weight:700;line-height:1.15;color:#fff;margin-bottom:6px}
+.htitle span{color:var(--gold-light)}
+.hsub{font-size:14px;color:rgba(255,255,255,.7);font-style:italic;margin-bottom:20px}
+.hmeta{display:flex;gap:24px;flex-wrap:wrap;font-family:Arial,sans-serif;font-size:12px}
+.hmi{display:flex;flex-direction:column;gap:2px}
+.hmi .l{color:rgba(255,255,255,.5);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.hmi .v{color:var(--gold-light);font-weight:700;font-size:13px}
+nav{background:var(--navy-mid);border-bottom:2px solid var(--gold);padding:0 24px;display:flex;overflow-x:auto;position:sticky;top:0;z-index:100}
+nav::-webkit-scrollbar{height:3px}
+nav::-webkit-scrollbar-thumb{background:var(--gold)}
+.nb{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.3px;color:rgba(255,255,255,.6);padding:12px 14px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:color .2s,border-color .2s;background:none;border-top:none;border-left:none;border-right:none}
+.nb:hover{color:var(--gold-light)}
+.nb.active{color:var(--gold-light);border-bottom-color:var(--gold);font-weight:700}
+.cw{max-width:960px;margin:0 auto;padding:36px 40px}
+.sec{display:none}
+.sec.active{display:block}
+.snum{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.stitle{font-size:24px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.esum{background:var(--navy);color:rgba(255,255,255,.9);border-left:4px solid var(--gold);border-radius:var(--r);padding:16px 20px;font-size:13px;line-height:1.8;margin-bottom:28px}
+h3{font-size:16px;color:var(--navy);margin:24px 0 10px;font-weight:700}
+h4{font-size:12px;color:var(--navy-mid);margin:16px 0 6px;font-weight:700;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px}
+p{margin-bottom:12px}
+ul,ol{padding-left:18px;margin-bottom:12px}
+li{margin-bottom:5px}
+strong{font-weight:700}
+.flag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:Arial,sans-serif;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
+.fw{background:var(--warn-bg);color:var(--warn)}
+.ff{background:#FFF0E0;color:#C25400}
+.fd{background:var(--info-bg);color:var(--info)}
+.fm{background:var(--success-bg);color:var(--success)}
+.co{border-left:4px solid;border-radius:var(--r);padding:14px 18px;margin:16px 0;font-size:13px}
+.co p:last-child{margin-bottom:0}
+.cw2{border-color:#E87A00;background:var(--warn-bg)}
+.cf{border-color:#E85D00;background:#FFF0E0}
+.ci{border-color:var(--gold);background:var(--gold-pale)}
+.cd{border-color:#1A5DAA;background:var(--info-bg)}
+.cs{border-color:#1D6B3A;background:var(--success-bg)}
+.tw{overflow-x:auto;margin:16px 0;border-radius:var(--r);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:12px}
+thead tr{background:var(--navy);color:#fff}
+thead th{padding:10px 12px;text-align:left;font-weight:700;letter-spacing:.3px}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:last-child{border-bottom:none}
+tbody tr:nth-child(even){background:rgba(240,201,106,.06)}
+tbody td{padding:9px 12px;vertical-align:top;line-height:1.5}
+.tg{color:var(--gold);font-weight:700}
+.tn{color:var(--navy);font-weight:700}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0}
+.sc{background:var(--navy);border-radius:var(--r);padding:16px;color:#fff;text-align:center}
+.sv{font-size:22px;font-weight:700;color:var(--gold-light);line-height:1.1;margin-bottom:3px}
+.sl{font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.5px;text-transform:uppercase}
+.pb{border:1px solid var(--border);border-top:4px solid;border-radius:var(--r);padding:20px;margin:16px 0}
+.p1{border-top-color:#3B82F6}
+.p2{border-top-color:var(--gold)}
+.p3{border-top-color:#1D6B3A}
+.pl{font-family:Arial,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:5px}
+.p1 .pl{color:#3B82F6}.p2 .pl{color:var(--gold)}.p3 .pl{color:#1D6B3A}
+.pt{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.pbud{display:inline-block;background:var(--navy);color:var(--gold-light);font-family:Arial,sans-serif;font-size:17px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:10px}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+@media(max-width:600px){.ag{grid-template-columns:1fr}}
+.ac{border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:var(--r);padding:16px;background:#fff}
+.an{font-size:12px;font-weight:700;color:var(--navy);font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.as{font-size:20px;font-weight:700;color:var(--gold)}
+.tc{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.tag{background:var(--gold-pale);border:1px solid var(--border);border-radius:20px;padding:2px 8px;font-size:11px;font-family:Arial,sans-serif;color:var(--navy-mid)}
+.tb{background:var(--info-bg);border-color:#B5D4F4;color:var(--info)}
+.cc{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:16px 20px;margin-bottom:16px}
+.ch{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.cn{font-size:15px;font-weight:700;color:var(--navy)}
+.cb{background:var(--gold-pale);border:1px solid var(--border);border-radius:20px;padding:3px 12px;font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:var(--gold);white-space:nowrap}
+.kr{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.kc{background:var(--info-bg);border:1px solid #B5D4F4;border-radius:6px;padding:3px 8px;font-size:11px;font-family:Arial,sans-serif;color:var(--info)}
+.fs{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.fn{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold-light);font-family:Arial,sans-serif;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.fc{flex:1}
+.ft{font-weight:700;color:var(--navy);margin-bottom:3px}
+.fd2{color:#C25400;font-size:12px;font-family:Arial,sans-serif;font-weight:700}
+.rk{background:#fff;border:1px solid var(--border);border-left:4px solid #E84040;border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
+.rt{font-weight:700;color:var(--navy);margin-bottom:5px;font-size:14px}
+.rb{font-size:13px;color:var(--muted);margin-bottom:7px}
+.mi{font-size:13px;color:var(--success);background:var(--success-bg);border-radius:4px;padding:7px 10px}
+.mi::before{content:'✓ Mitigation: ';font-weight:700}
+.ep{background:var(--navy);color:#fff;border-radius:12px;padding:32px;margin-bottom:28px}
+.ep h2{color:var(--gold-light);font-size:20px;margin-bottom:20px;border-bottom:1px solid rgba(201,146,42,.3);padding-bottom:10px}
+.es{margin-bottom:20px}
+.es h3{color:var(--gold-light);font-size:13px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;font-weight:700}
+.es p{color:rgba(255,255,255,.85);font-size:13px;line-height:1.7}
+.ek{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:10px}
+.ei{background:rgba(255,255,255,.07);border:1px solid rgba(201,146,42,.25);border-radius:8px;padding:12px;text-align:center}
+.ei .v{font-size:18px;font-weight:700;color:var(--gold-light)}
+.ei .l{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.er{display:flex;flex-direction:column;gap:7px}
+.eri{background:rgba(232,64,64,.12);border-left:3px solid #E84040;border-radius:4px;padding:7px 10px;font-size:12px;color:rgba(255,255,255,.85)}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="htag">Confidential · Leadership Presentation · FY2025–26</div>
+  <div class="htitle">BookMyRajshree<br><span>Online Acquisition Master Plan</span></div>
+  <div class="hsub">"Bharat Ka Apna Lottery" — Digital Growth Strategy</div>
+  <div class="hmeta">
+    <div class="hmi"><span class="l">Total Budget</span><span class="v">₹15 Crores</span></div>
+    <div class="hmi"><span class="l">Timeline</span><span class="v">12–15 Months</span></div>
+    <div class="hmi"><span class="l">Primary Geo</span><span class="v">Goa · Maharashtra</span></div>
+    <div class="hmi"><span class="l">Operator</span><span class="v">Skill Lotto Solutions Pvt Ltd</span></div>
+    <div class="hmi"><span class="l">Licence</span><span class="v">Goa State Lotteries</span></div>
+  </div>
+</div>
+
+<nav>
+  <button class="nb active" onclick="show('exec')">Executive Summary</button>
+  <button class="nb" onclick="show('s1')">1 · Market</button>
+  <button class="nb" onclick="show('s2')">2 · Audience</button>
+  <button class="nb" onclick="show('s3')">3 · Channels</button>
+  <button class="nb" onclick="show('s4')">4 · Android APK</button>
+  <button class="nb" onclick="show('s5')">5 · iOS</button>
+  <button class="nb" onclick="show('s6')">6 · Attribution</button>
+  <button class="nb" onclick="show('s7')">7 · Creative</button>
+  <button class="nb" onclick="show('s8')">8 · Rollout</button>
+  <button class="nb" onclick="show('s9')">9 · Budget</button>
+  <button class="nb" onclick="show('s10')">10 · Risks</button>
+</nav>
+
+<div class="cw">
+
+<!-- EXEC -->
+<div class="sec active" id="exec">
+  <div class="snum">One-Page Executive Summary</div>
+  <div class="stitle">The Case for Digital Acquisition Now</div>
+  <div class="ep">
+    <h2>BookMyRajshree — ₹15 Cr Online Acquisition Plan · 2025–26</h2>
+    <div class="es">
+      <h3>The Opportunity</h3>
+      <p>India's physical lottery market is estimated at ₹50,000+ crores annually with 18M+ daily transactions through Rajshree alone. Digital penetration remains below 5%. Rajshree has 65% offline market share across 25,000 retail terminals — but no dominant player has yet captured the online consumer. BookMyRajshree, as the only government-licensed Rajshree digital platform, is positioned to own this transition. The window to build first-mover advantage is now.</p>
+    </div>
+    <div class="es">
+      <h3>Our Approach</h3>
+      <p>A three-phase, 12–15 month acquisition program targeting four high-intent audience segments — existing physical lottery buyers, fantasy gaming app users, aspirational earners, and competitor app switchers. 10 acquisition channels, deep-focus on solving the Android APK install funnel, and precision attribution via AppsFlyer.</p>
+    </div>
+    <div class="es">
+      <h3>Budget Deployment</h3>
+      <div class="ek">
+        <div class="ei"><div class="v">₹15 Cr</div><div class="l">Total Budget</div></div>
+        <div class="ei"><div class="v">₹2.5 Cr</div><div class="l">Phase 1 Test</div></div>
+        <div class="ei"><div class="v">₹7.5 Cr</div><div class="l">Phase 2 Scale</div></div>
+        <div class="ei"><div class="v">₹5 Cr</div><div class="l">Phase 3 Optimise</div></div>
+        <div class="ei"><div class="v">₹12 Cr</div><div class="l">Working Media</div></div>
+        <div class="ei"><div class="v">₹3 Cr</div><div class="l">Non-Working</div></div>
+      </div>
+    </div>
+    <div class="es">
+      <h3>Expected Outcomes (12 Months)</h3>
+      <div class="ek">
+        <div class="ei"><div class="v">4.5L+</div><div class="l">App Installs</div></div>
+        <div class="ei"><div class="v">2L+</div><div class="l">Registrations</div></div>
+        <div class="ei"><div class="v">75K+</div><div class="l">First Purchases</div></div>
+        <div class="ei"><div class="v">₹280</div><div class="l">Target CPI</div></div>
+        <div class="ei"><div class="v">₹650</div><div class="l">Target CPR</div></div>
+        <div class="ei"><div class="v">₹1,800</div><div class="l">Target CPT</div></div>
+      </div>
+    </div>
+    <div class="es">
+      <h3>Top 3 Risks</h3>
+      <div class="er">
+        <div class="eri"><strong>Ad Policy Restrictions:</strong> Google and Meta require gambling certifications. Apply in Week 1; use influencer and programmatic while pending.</div>
+        <div class="eri"><strong>Android APK Trust Barrier:</strong> "Unknown Sources" warning causes ~40–50% drop-off. Website rebuild is a hard pre-launch gate before any Android paid media.</div>
+        <div class="eri"><strong>Attribution Gaps:</strong> APK installs bypass Google Play referrer. AppsFlyer Custom Store + probabilistic attribution — must be QA'd before launch.</div>
+      </div>
+    </div>
+  </div>
+  <div class="co ci"><p><strong>How to use this document:</strong> Navigate using the tabs above. Each section opens with a summary, followed by detailed tactics and tables. <span class="flag fw">⚠️ Compliance</span> <span class="flag ff">🔥 Quick Win</span> <span class="flag fd">📊 AppsFlyer</span> <span class="flag fm">📱 APK/Web</span></p></div>
+</div>
+
+<!-- S1 -->
+<div class="sec" id="s1">
+  <div class="snum">Section 1</div>
+  <div class="stitle">Market Opportunity & Context</div>
+  <div class="esum">India's lottery market is one of the world's largest underpenetrated digital opportunities. Less than 5% of ₹50,000+ Cr in annual transactions have migrated online. Rajshree has dominant offline presence but no entrenched digital rival — a 12–18 month window exists to capture the high ground.</div>
+  <div class="sg">
+    <div class="sc"><div class="sv">₹50,000 Cr+</div><div class="sl">Annual Market Size</div></div>
+    <div class="sc"><div class="sv">18M+</div><div class="sl">Daily Rajshree Transactions</div></div>
+    <div class="sc"><div class="sv">25,000</div><div class="sl">Retail Terminals</div></div>
+    <div class="sc"><div class="sv">&lt;5%</div><div class="sl">Digital Penetration</div></div>
+    <div class="sc"><div class="sv">65%</div><div class="sl">Offline Market Share</div></div>
+    <div class="sc"><div class="sv">13</div><div class="sl">Legal Lottery States</div></div>
+  </div>
+  <h3>Why NOW Is the Right Moment</h3>
+  <ul>
+    <li><strong>Post-COVID digital habit formation</strong> is entrenched — UPI, OTT, and gaming apps have normalised digital transactions for the target demographic.</li>
+    <li><strong>Fantasy sports normalised real-money gaming</strong> — Dream11 has 130M+ users, many lottery-adjacent in intent.</li>
+    <li><strong>No dominant digital Rajshree brand yet</strong> — MyRajshree is underfunded and lacks the government-backed trust narrative.</li>
+    <li><strong>Goa + Maharashtra as test markets</strong> offer high digital literacy and existing retail density — lowest cost to first conversion.</li>
+    <li><strong>4G/5G penetration</strong> exceeds 70% in all target geographies — bandwidth is no longer a barrier to APK download.</li>
+  </ul>
+  <h3>State-Wise Lottery Legality</h3>
+  <div class="co cw2"><p><span class="flag fw">⚠️ Compliance</span> Only target and run paid media in states where lottery is expressly legal. Consult legal counsel before expanding to any new geography.</p></div>
+  <div class="tw"><table>
+    <thead><tr><th>State</th><th>Legal?</th><th>Phase</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Goa</td><td>✅ Yes</td><td>Phase 1</td><td>Home licence state. High trust, dense retail.</td></tr>
+      <tr><td class="tn">Maharashtra</td><td>✅ Yes</td><td>Phase 1</td><td>Large population, high digital literacy.</td></tr>
+      <tr><td class="tn">West Bengal</td><td>✅ Yes</td><td>Phase 2</td><td>Second-largest lottery state. High priority.</td></tr>
+      <tr><td class="tn">Assam, Nagaland, Sikkim</td><td>✅ Yes</td><td>Phase 2</td><td>Strong NE India lottery culture. Bundle campaigns.</td></tr>
+      <tr><td class="tn">Punjab, MP, Mizoram, Meghalaya, Arunachal</td><td>✅ Yes</td><td>Phase 2</td><td>Vernacular content essential.</td></tr>
+      <tr><td>Karnataka, TN, Gujarat, Rajasthan, AP</td><td>❌ Banned</td><td>Exclude</td><td>Do NOT advertise or target users here.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Competitive Landscape</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Competitor</th><th>Strengths</th><th>Weaknesses</th><th>Our Edge</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">MyRajshree</td><td>Early mover, brand familiarity</td><td>No Play Store app, weak UX, no govt stamp</td><td>Official govt licensing; superior trust narrative</td></tr>
+      <tr><td class="tn">Dear Lottery Online</td><td>NE India dominance</td><td>Limited geo, poor digital marketing</td><td>Goa licence + Maharashtra scale</td></tr>
+      <tr><td class="tn">Kerala Lottery Online</td><td>Kerala brand loyalty, iOS app</td><td>Geo-restricted, one draw type</td><td>Multi-state coverage, more frequent draws</td></tr>
+    </tbody>
+  </table></div>
+  <div class="co cf"><p><span class="flag ff">🔥 Quick Win</span> Build a "BookMyRajshree vs MyRajshree" comparison landing page. Captures high-intent switchers already searching for alternatives — estimated 200+ organic conversions/month within 6 months.</p></div>
+</div>
+
+<!-- S2 -->
+<div class="sec" id="s2">
+  <div class="snum">Section 2</div>
+  <div class="stitle">Audience Strategy</div>
+  <div class="esum">Four distinct audience segments cover the full acquisition funnel. Segments 2 and 4 are the fastest path to first purchase. Segment 1 requires the most nurturing but delivers the highest long-term LTV.</div>
+  <div class="ag">
+    <div class="ac">
+      <div class="as">SEG 1</div>
+      <div class="an">Existing Physical Lottery Buyers</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Offline-first. Buy from pan shops and retail counters. Trust = government stamp.</p>
+      <p style="font-size:12px"><strong>Age:</strong> 30–55 | <strong>Income:</strong> ₹15K–40K/mo | <strong>Geo:</strong> Goa, MH Tier 1/2</p>
+      <div class="tc"><span class="tag">YouTube</span><span class="tag">WhatsApp</span><span class="tag">ShareChat</span><span class="tag">SMS</span></div>
+      <p style="font-size:12px"><strong>Key fear:</strong> "Is this a real government app? Will I actually get paid?" Respond to: govt logo, winner faces from their region, local language, peer referral.</p>
+    </div>
+    <div class="ac">
+      <div class="as">SEG 2</div>
+      <div class="an">Fantasy Sports & Gaming App Users</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Already digital. Already deposited real money. Highest-intent new audience. Shortest path to purchase.</p>
+      <p style="font-size:12px"><strong>Age:</strong> 22–38 | <strong>Income:</strong> ₹20K–60K/mo | Dream11, MPL, WinZO users</p>
+      <div class="tc"><span class="tb tag">Meta Ads</span><span class="tb tag">YouTube</span><span class="tb tag">Google UAC</span><span class="tb tag">Affiliate</span></div>
+      <p style="font-size:12px">Respond to: bigger jackpots, no skill needed, same thrill, instant results.</p>
+    </div>
+    <div class="ac">
+      <div class="as">SEG 3</div>
+      <div class="an">Aspirational Males 25–45</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Working-class men in Tier 1/2/3 cities. Smartphone-first but not app-savvy. Lottery is culturally normal.</p>
+      <p style="font-size:12px"><strong>Age:</strong> 25–45 | <strong>Income:</strong> ₹8K–25K/mo | Hindi, Marathi, Bengali</p>
+      <div class="tc"><span class="tag">Josh/Moj</span><span class="tag">ShareChat</span><span class="tag">Influencer</span><span class="tag">WhatsApp</span></div>
+      <p style="font-size:12px">Respond to: local language winner stories, simple process, small ticket price. Fear: "is this a scam?"</p>
+    </div>
+    <div class="ac">
+      <div class="as">SEG 4</div>
+      <div class="an">Competitor Lottery App Users</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Already converted for lottery digitally. Use MyRajshree, Dear Lottery, Kerala apps. Easy to switch.</p>
+      <p style="font-size:12px"><strong>Age:</strong> 25–50 | <strong>Digital Comfort:</strong> High | Switching barrier: Low</p>
+      <div class="tc"><span class="tb tag">Google Search</span><span class="tb tag">Apple Search Ads</span><span class="tb tag">Meta</span></div>
+      <p style="font-size:12px">Respond to: "100% govt-backed payouts", "instant results", direct comparison messaging.</p>
+    </div>
+  </div>
+  <h3>Lookalike & Exclusion Strategy</h3>
+  <ul>
+    <li><strong>Meta Lookalike 1%:</strong> Seed from existing registered users (hashed phone numbers). Highest purchase intent.</li>
+    <li><strong>Meta Lookalike 2–5%:</strong> Seed from APK download events via AppsFlyer → Meta custom audience sync.</li>
+    <li><strong>Google Similar Audiences:</strong> Based on first-purchase converters for YouTube + Display expansion in Phase 2.</li>
+    <li><strong>Exclusions:</strong> All lottery-banned states, under-18s, existing installers, users who uninstalled 3+ times.</li>
+  </ul>
+  <h3>Vernacular Content Strategy</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Language</th><th>States</th><th>Priority Channels</th><th>Tone</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Hindi</td><td>MH, MP, Punjab, Assam</td><td>YouTube, ShareChat, Meta</td><td>Aspirational, warm, community pride</td></tr>
+      <tr><td class="tn">Marathi</td><td>Maharashtra</td><td>ShareChat, YouTube, Influencer</td><td>"Maharashtra ka winner"</td></tr>
+      <tr><td class="tn">Konkani</td><td>Goa</td><td>WhatsApp, Influencer, YouTube</td><td>Intimate, community trust, Goa pride</td></tr>
+      <tr><td class="tn">Bengali</td><td>West Bengal, Assam</td><td>ShareChat, YouTube, Meta</td><td>Aspirational, family-oriented, trust-heavy</td></tr>
+      <tr><td class="tn">Assamese</td><td>Assam, Meghalaya</td><td>Josh, ShareChat, WhatsApp</td><td>Community storytelling, winner narratives</td></tr>
+      <tr><td class="tn">English</td><td>All urban Tier 1</td><td>Google Search, ASA, Meta</td><td>Clear, authoritative, govt-backed</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<!-- S3 -->
+<div class="sec" id="s3">
+  <div class="snum">Section 3</div>
+  <div class="stitle">Channel Strategy</div>
+  <div class="esum">Ten acquisition channels activated in phases. Meta, YouTube, and Influencer are the three anchor channels. Android paid media unlocked only after APK page meets conversion benchmarks. Apple Search Ads and Google Search activated from Day 1.</div>
+
+  <div class="cc"><div class="ch"><div class="cn">a) Meta Ads (Facebook + Instagram)</div><div class="cb">₹2.8 Cr</div></div>
+    <span class="flag fw">⚠️ Gambling policy compliance required</span>
+    <p style="margin-top:8px;font-size:13px"><strong>Objective:</strong> App installs (iOS priority), website traffic for Android APK, retargeting lapsed users. Age 18+ enforced. Geo-restricted to legal states only.</p>
+    <p style="font-size:13px"><strong>Policy path:</strong> Submit Meta Gambling Authorization form with Goa State Lottery licence. While pending, use traffic-objective ads to website (not app install objective). No "guaranteed win" or "sure jackpot" copy. Mandatory disclaimer: "18+ only, T&C apply, legal in Goa."</p>
+    <div class="kr"><span class="kc">CPI target: ₹180–250 (iOS)</span><span class="kc">CTR: 1.2%+</span><span class="kc">Phase 1: ₹40L</span><span class="kc">Phase 2: ₹1.4 Cr</span></div>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">b) Google Ads (Search + UAC)</div><div class="cb">₹2.2 Cr</div></div>
+    <span class="flag fw">⚠️ Google gambling certification required (4–6 weeks)</span>
+    <p style="margin-top:8px;font-size:13px"><strong>Search:</strong> High-intent queries — "rajshree lottery online", "book my rajshree app download", competitor brand names. Run on brand terms while certification is pending.</p>
+    <p style="font-size:13px"><strong>Google UAC (iOS):</strong> Universal App Campaigns connecting to App Store. Target in-market: Online Games, Fantasy Sports.</p>
+    <div class="kr"><span class="kc">Search CPC: ₹12–25</span><span class="kc">UAC CPI: ₹150–200 (iOS)</span><span class="kc">Phase 1: ₹30L</span></div>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">c) YouTube Organic + Paid</div><div class="cb">₹1.5 Cr</div></div>
+    <span class="flag ff">🔥 Most brand-safe lottery channel</span>
+    <p style="margin-top:8px;font-size:13px"><strong>Organic (launch immediately):</strong> Daily draw result videos, winner story docs, how-to-play tutorials in Hindi/Marathi/Bengali. Result pages have 500K+ monthly searches — owning these drives zero-cost installs.</p>
+    <p style="font-size:13px"><strong>Paid pre-roll:</strong> 6s bumpers + 15s/30s TrueView. Male 25–45, Tier 1/2/3, legal lottery states. Activate post-certification.</p>
+    <div class="kr"><span class="kc">Target: 50K subscribers in 6 months</span><span class="kc">CPV: ₹0.40–0.80</span></div>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">d) ShareChat & Moj</div><div class="cb">₹80L</div></div>
+    <p style="font-size:13px">180M+ monthly users, heavy Tier 2/3 concentration, much more permissive lottery ad policy than Meta/Google. Full-screen native video (15s) in Hindi, Marathi, Bengali, Assamese feeds. Phase 2 activation.</p>
+    <div class="kr"><span class="kc">CPC: ₹4–10</span><span class="kc">Reach: 5M+/month at scale</span></div>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">e) Influencer Marketing</div><div class="cb">₹1.2 Cr</div></div>
+    <span class="flag ff">🔥 Critical for trust-building with Seg 1 & 3</span>
+    <p style="margin-top:8px;font-size:13px"><strong>Macro (2–5M followers):</strong> 2–3 regional YouTubers in MH + Goa. Brand integration. ₹8–15L/creator. Phase 2 blast.</p>
+    <p style="font-size:13px"><strong>Micro (50K–500K):</strong> 20–30 creators in gaming/lottery niche. "I tried BookMyRajshree" format. ₹50K–3L/creator.</p>
+    <p style="font-size:13px"><strong>Nano (5K–50K):</strong> 100+ WhatsApp/ShareChat community leaders. ₹5K–20K/creator. Hyper-local trust. Critical for Seg 1.</p>
+    <div class="kr"><span class="kc">Target: 50M+ total reach</span><span class="kc">APK downloads via links: 30,000+</span></div>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">f) WhatsApp Business API</div><div class="cb">₹30L</div></div>
+    <span class="flag ff">🔥 80%+ open rates</span>
+    <p style="margin-top:8px;font-size:13px">QR codes at all 25,000 Rajshree retail terminals → WhatsApp opt-in flow. Use for: draw result announcements, APK install assistance, winner broadcasts. Target: 50,000 opt-ins in 6 months from retail network.</p>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">g) Affiliate / Performance Marketing</div><div class="cb">₹1.5 Cr</div></div>
+    <span class="flag fd">📊 AppsFlyer fraud monitoring essential</span>
+    <p style="margin-top:8px;font-size:13px">CPA model only — pay on verified AppsFlyer events. Rates: APK install ₹80–120, registration ₹200–300, first deposit ₹400–600. Networks: vCommission, Admitad India, Tyroo. Activate Protect360 strict rules from Day 1.</p>
+    <div class="kr"><span class="kc">Target: 60,000 affiliate APK downloads</span><span class="kc">Fraud rate target: &lt;5%</span></div>
+  </div>
+
+  <div class="cc"><div class="ch"><div class="cn">h) SEO & Content</div><div class="cb">₹40L</div></div>
+    <p style="font-size:13px">Build #1 lottery information destination in India. Target: "rajshree lottery result today" (500K+ monthly searches, low competition). Daily result pages, state-wise how-to guides, winner stories. SEO pays off Month 9–10 onward.</p>
+  </div>
+
+  <h3>Channel Priority Summary</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Channel</th><th>Phase</th><th>Budget</th><th>Primary KPI</th><th>Compliance Risk</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Apple Search Ads</td><td>Phase 1</td><td>₹60L</td><td>CPI &lt;₹180</td><td>🟢 Low</td></tr>
+      <tr><td class="tn">Google Search</td><td>Phase 1</td><td>₹40L</td><td>CPC &lt;₹25</td><td>🟡 Medium</td></tr>
+      <tr><td class="tn">YouTube Organic</td><td>Phase 1</td><td>₹20L (prod)</td><td>Subscribers</td><td>🟢 Low</td></tr>
+      <tr><td class="tn">Meta Ads</td><td>Phase 1→2</td><td>₹2.8 Cr</td><td>CPI &lt;₹250</td><td>🔴 High</td></tr>
+      <tr><td class="tn">Influencer</td><td>Phase 1→2</td><td>₹1.2 Cr</td><td>Downloads</td><td>🟡 Medium</td></tr>
+      <tr><td class="tn">ShareChat/Moj</td><td>Phase 2</td><td>₹80L</td><td>CTR &gt;1%</td><td>🟢 Low</td></tr>
+      <tr><td class="tn">YouTube Paid</td><td>Phase 2</td><td>₹1.3 Cr</td><td>CPV &lt;₹0.80</td><td>🟡 Medium</td></tr>
+      <tr><td class="tn">Affiliate</td><td>Phase 2</td><td>₹1.5 Cr</td><td>CPA &lt;₹600</td><td>🟡 Medium</td></tr>
+      <tr><td class="tn">WhatsApp</td><td>Phase 1→3</td><td>₹30L</td><td>Opt-in rate</td><td>🟢 Low</td></tr>
+      <tr><td class="tn">Programmatic</td><td>Phase 2→3</td><td>₹70L</td><td>CPA &lt;₹800</td><td>🟢 Low</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<!-- S4 -->
+<div class="sec" id="s4">
+  <div class="snum">Section 4</div>
+  <div class="stitle">Android APK Funnel — Deep Dive</div>
+  <div class="esum">The Android APK funnel is the most critical — and most fragile — element of this plan. Unlike a Play Store install (2 steps), APK install requires 6–8 user actions including a security warning. Every rupee on Android paid media is wasted if the website is not rebuilt first.</div>
+  <div class="co cd"><p><span class="flag fm">📱 PRE-LAUNCH DEPENDENCY</span> <strong>No Android paid media goes live until the APK download page achieves a minimum 15% visit-to-download-click rate.</strong> Estimated rebuild: 4–6 weeks, 1 developer + 1 designer.</p></div>
+
+  <h3>Funnel Drop-Off at Each Step</h3>
+  <div class="fs"><div class="fn">1</div><div class="fc"><div class="ft">Ad Click → Website Visit</div><p style="font-size:13px">Target: 100% reach the APK page. Page must load under 3 seconds on 4G.</p></div></div>
+  <div class="fs"><div class="fn">2</div><div class="fc"><div class="ft">Visit → APK Download Click</div><p style="font-size:13px"><span class="fd2">Current: ~8%. Target after rebuild: 20–25%.</span> Fix: full page redesign with trust signals, clear CTA, install guide on-page.</p></div></div>
+  <div class="fs"><div class="fn">3</div><div class="fc"><div class="ft">Download Click → "Enable Unknown Sources" Completed</div><p style="font-size:13px"><span class="fd2">Estimated drop-off: 35–45%.</span> Biggest loss point. Fix: show step-by-step screenshots for 3 major Android skins (Stock, Samsung One UI, Xiaomi MIUI) BEFORE the user clicks download.</p></div></div>
+  <div class="fs"><div class="fn">4</div><div class="fc"><div class="ft">Install → App Open</div><p style="font-size:13px"><span class="fd2">Drop-off: ~15%.</span> Fix: AppsFlyer deferred deep link routes user directly to registration screen on first open — improves registration rate 20–30%.</p></div></div>
+  <div class="fs"><div class="fn">5</div><div class="fc"><div class="ft">App Open → Registration</div><p style="font-size:13px"><span class="fd2">Drop-off: ~30%.</span> Offer download bonus only visible to new registrations. WhatsApp OTP reduces friction vs email.</p></div></div>
+  <div class="fs"><div class="fn">6</div><div class="fc"><div class="ft">Registration → First Ticket Purchase</div><p style="font-size:13px"><span class="fd2">Drop-off: ~55%.</span> Push notification + WhatsApp reminder within 24 hours. Draw countdown + jackpot amount. First-purchase discount.</p></div></div>
+
+  <h3>APK Download Page — Rebuild Brief</h3>
+  <h4>Above the Fold (visible without scrolling on mobile)</h4>
+  <ul>
+    <li>App logo + "BookMyRajshree — Official Rajshree Lottery App"</li>
+    <li>Large gold CTA button: "Download Free App (Android)" — sticky scroll</li>
+    <li>Government of Goa logo + "100% Government Approved" badge</li>
+    <li>App screenshot showing jackpot amounts</li>
+    <li>Headline: "India's Only Official Rajshree App. Play in 2 Minutes."</li>
+  </ul>
+  <h4>Trust Architecture (Below Fold)</h4>
+  <ul>
+    <li>SSL badge, licence number displayed, media mentions</li>
+    <li>3 winner testimonials with photo, city, win amount</li>
+    <li>"X lakh players have already downloaded" counter</li>
+    <li>iOS App Store rating carried across</li>
+  </ul>
+  <h4>Installation Guide (Inline on Page)</h4>
+  <ol>
+    <li>Tap "Download App" → APK file downloads</li>
+    <li>Go to Settings → Security/Privacy → Enable "Install from Unknown Sources"</li>
+    <li>Screenshots shown for Stock Android, Samsung One UI, Xiaomi MIUI</li>
+    <li>Return to Downloads → Tap BookMyRajshree.apk → Install</li>
+    <li>Open app → Register with mobile number → Play</li>
+  </ol>
+  <h4>Additional Elements</h4>
+  <ul>
+    <li>60-second embedded "how to download" video (Hindi + Marathi)</li>
+    <li>WhatsApp click-to-chat: "Need help installing? Chat with us"</li>
+    <li>Separate page variants: Meta traffic vs YouTube vs influencer links</li>
+  </ul>
+
+  <h3>A/B Testing Plan</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Test</th><th>Element</th><th>Variant A</th><th>Variant B</th><th>Metric</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>CTA Button Copy</td><td>"Download Free App"</td><td>"Get the Official App"</td><td>Click-through rate</td></tr>
+      <tr><td>2</td><td>Hero Image</td><td>Jackpot amount (₹XX Cr)</td><td>Winner testimonial photo</td><td>Click-through rate</td></tr>
+      <tr><td>3</td><td>Trust Badge Placement</td><td>Above fold</td><td>After install guide</td><td>Download completion</td></tr>
+      <tr><td>4</td><td>Install Guide Format</td><td>Text + screenshots</td><td>Embedded video</td><td>Install completion</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>AppsFlyer Event Taxonomy for APK Funnel</h3>
+  <div class="co cd"><p><span class="flag fd">📊 AppsFlyer</span> Register bookmyrajshree.com as a Custom Store in AppsFlyer. Generate OneLink for all campaigns. Enable probabilistic attribution for cases where device ID cannot be matched deterministically.</p></div>
+  <div class="tw"><table>
+    <thead><tr><th>Event Name</th><th>Trigger</th><th>Business Meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">af_apk_download_click</td><td>User taps Download button</td><td>Top of funnel — intent confirmed</td></tr>
+      <tr><td class="tn">af_install</td><td>App opens for first time</td><td>Acquisition confirmed</td></tr>
+      <tr><td class="tn">af_registration</td><td>Completes mobile OTP registration</td><td>User is now identifiable</td></tr>
+      <tr><td class="tn">af_add_payment</td><td>Adds UPI/card payment method</td><td>Deposit intent confirmed</td></tr>
+      <tr><td class="tn">af_first_purchase</td><td>First lottery ticket bought</td><td>Revenue event — CPA target</td></tr>
+      <tr><td class="tn">af_repeat_purchase</td><td>2nd+ ticket purchased</td><td>Retention/habit signal</td></tr>
+      <tr><td class="tn">af_result_check</td><td>User opens result view</td><td>Engagement signal</td></tr>
+      <tr><td class="tn">af_uninstall</td><td>App uninstalled (server-side)</td><td>Churn — trigger re-engagement</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<!-- S5 -->
+<div class="sec" id="s5">
+  <div class="snum">Section 5</div>
+  <div class="stitle">iOS Acquisition Funnel</div>
+  <div class="esum">The iOS funnel flows through the standard App Store — simpler than Android. However, with only 39 ratings and 3.7 stars, the App Store page is currently a conversion killer. ASO improvements must precede any major iOS paid spend. Apple Search Ads is the highest-intent channel and should be the first paid channel activated.</div>
+  <div class="co cf"><p><span class="flag ff">🔥 Activate Day 1</span> Apple Search Ads does not have gambling-specific policy restrictions for licensed operators in India. Cleanest, most frictionless paid iOS channel. Activate in Week 1 of Phase 1.</p></div>
+
+  <h3>Apple Search Ads Campaign Structure</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Campaign</th><th>Match Type</th><th>Keywords</th><th>Target CPI</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Brand</td><td>Exact</td><td>"BookMyRajshree", "Book My Rajshree"</td><td>₹100–150</td></tr>
+      <tr><td class="tn">Category</td><td>Broad</td><td>"lottery app India", "online lottery", "goa lottery"</td><td>₹150–200</td></tr>
+      <tr><td class="tn">Competitor</td><td>Exact</td><td>"MyRajshree", "Dear Lottery", "Kerala Lottery app"</td><td>₹200–250</td></tr>
+      <tr><td class="tn">Discovery</td><td>Search Match</td><td>Apple algorithm — audience discovery</td><td>Daily cap ₹5,000</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>App Store Optimisation (ASO)</h3>
+  <div class="co cw2"><p><span class="flag fw">⚠️ Critical Gap</span> Current state: 3.7 stars, 39 ratings. Sub-4.0 rating materially suppresses both paid and organic conversion. Getting to 4.3+ is a business priority.</p></div>
+  <ul>
+    <li><strong>Title:</strong> Include "Rajshree Lottery" — Apple indexes titles heavily.</li>
+    <li><strong>Subtitle (30 chars):</strong> "India's Official Lottery App"</li>
+    <li><strong>Keywords (100 chars):</strong> "lottery,goa lottery,rajshree,online lottery,lottery result,book lottery ticket,jackpot"</li>
+    <li><strong>Description first 3 lines:</strong> Must contain "100% Government Approved", "Goa State Lottery Licence", "Instant Results", "Guaranteed Payouts"</li>
+    <li><strong>Screenshots:</strong> First 3 show jackpot amounts, winner announcements, ease of purchase — not just UI.</li>
+    <li><strong>Preview video:</strong> 15–30s showing the 3-step purchase flow. Hindi voiceover.</li>
+    <li><strong>Rating improvement:</strong> In-app rating prompt triggered 24 hours after first purchase via Apple's SKStoreReviewController. Target: 200 ratings, 4.2+ by end of Phase 2.</li>
+  </ul>
+
+  <h3>AppsFlyer iOS — SKAdNetwork + ATT</h3>
+  <div class="co cd"><p><span class="flag fd">📊 iOS Attribution</span> Show ATT prompt AFTER first result check or at registration (not on app open) — increases opt-in rate from ~20% to 40%+. Enable AppsFlyer Modeled Conversions for opted-out users.</p></div>
+  <p style="font-size:13px"><strong>Conversion Value Schema (6-bit SKAN):</strong></p>
+  <ul style="font-size:13px">
+    <li>Bits 0–1: Registration status (0=none, 1=partial, 2=complete, 3=verified)</li>
+    <li>Bits 2–3: First purchase status (0=none, 1=initiated, 2=complete, 3=repeat)</li>
+    <li>Bits 4–5: Revenue tier (0=₹0, 1=₹1–100, 2=₹101–500, 3=₹500+)</li>
+  </ul>
+</div>
+
+<!-- S6 -->
+<div class="sec" id="s6">
+  <div class="snum">Section 6</div>
+  <div class="stitle">Attribution & Measurement Framework</div>
+  <div class="esum">AppsFlyer is the confirmed MMP. Full implementation must be completed and QA'd in Month 1. No paid media launches until AppsFlyer is firing correctly on all key events.</div>
+  <div class="co cf"><p><strong>North Star Metric: Cost Per First Ticket Purchase (CPT)</strong> — blended across all channels. Integrates install cost, registration rate, and conversion to revenue. <strong>Target: CPT &lt;₹1,800 by end of Phase 2.</strong></p></div>
+
+  <h3>AppsFlyer Implementation Checklist</h3>
+  <div class="tw"><table>
+    <thead><tr><th>#</th><th>Task</th><th>Platform</th><th>Deadline</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Integrate AppsFlyer SDK (Android APK + iOS)</td><td>Both</td><td>Week 1</td></tr>
+      <tr><td>2</td><td>Register bookmyrajshree.com as Custom Store</td><td>Android</td><td>Week 1</td></tr>
+      <tr><td>3</td><td>Generate OneLink for APK download campaigns</td><td>Both</td><td>Week 1</td></tr>
+      <tr><td>4</td><td>Configure all 8 in-app events</td><td>Both</td><td>Week 2</td></tr>
+      <tr><td>5</td><td>Enable probabilistic attribution (fingerprinting)</td><td>Android</td><td>Week 2</td></tr>
+      <tr><td>6</td><td>Configure deferred deep linking → registration screen</td><td>Both</td><td>Week 2</td></tr>
+      <tr><td>7</td><td>Implement ATT prompt with optimised timing</td><td>iOS</td><td>Week 2</td></tr>
+      <tr><td>8</td><td>Set up SKAdNetwork Conversion Value schema</td><td>iOS</td><td>Week 2</td></tr>
+      <tr><td>9</td><td>Activate Protect360 — configure fraud rules</td><td>Both</td><td>Week 3</td></tr>
+      <tr><td>10</td><td>QA all events in AppsFlyer Test Mode</td><td>Both</td><td>Week 3</td></tr>
+      <tr><td>11</td><td>Build Leadership Dashboard</td><td>Both</td><td>Week 4</td></tr>
+      <tr><td>12</td><td>Connect all media channels to AppsFlyer</td><td>Both</td><td>Week 3–4</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Protect360 Fraud Rules</h3>
+  <ul>
+    <li>Block CTIT &lt;10 seconds — almost certainly click injection fraud</li>
+    <li>Block CTIT &gt;24 hours — suggests click hijacking</li>
+    <li>Block devices with &gt;3 installs in 30 days with same fingerprint but different device IDs</li>
+    <li>Flag any affiliate sub-publisher driving &gt;500 installs/day from a single IP range</li>
+    <li>Hold payment if affiliate drives &gt;80% installs with 0 registrations within 7 days</li>
+  </ul>
+
+  <h3>Leadership Dashboard Design</h3>
+  <div class="tw"><table>
+    <thead><tr><th>View</th><th>Cadence</th><th>Key Metrics</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Daily Snapshot</td><td>7am daily</td><td>Installs by OS, registrations, first purchases, total spend, CPT, fraud blocked %</td></tr>
+      <tr><td class="tn">Weekly Review</td><td>Monday</td><td>WoW CPI/CPT by channel, funnel conversion rates, top 3 creatives, budget pacing vs plan</td></tr>
+      <tr><td class="tn">Monthly Business Review</td><td>1st of month</td><td>Channel-wise CPI/CPR/CPT vs targets, LTV cohort D7/D30/D90, CAC:LTV ratio, geo breakdown</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<!-- S7 -->
+<div class="sec" id="s7">
+  <div class="snum">Section 7</div>
+  <div class="stitle">Creative Strategy</div>
+  <div class="esum">Given policy restrictions on claims, the creative strategy must do heavy lifting on trust, aspiration, and simplicity — not gambling excitement. Each segment requires a distinct message architecture, format, and language.</div>
+
+  <h3>Messaging Framework by Segment</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Segment</th><th>Hero Message</th><th>Primary Fear</th><th>CTA</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Seg 1: Physical Buyers</td><td>"Same Rajshree lottery. Now on your phone."</td><td>"Is this a real government app?"</td><td>"Download Official App"</td></tr>
+      <tr><td class="tn">Seg 2: Gaming App Users</td><td>"Bigger jackpots. No skill needed. 100% government."</td><td>"Is this just another gaming app?"</td><td>"Play Now"</td></tr>
+      <tr><td class="tn">Seg 3: Aspirational Males</td><td>"₹20 ticket. Crore ka sapna."</td><td>"Is this for me? Is it a scam?"</td><td>"Download Free"</td></tr>
+      <tr><td class="tn">Seg 4: Competitor Users</td><td>"Goa Government licence. Guaranteed payouts."</td><td>"Why should I switch?"</td><td>"Switch Today"</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Video Production Plan</h3>
+  <ul>
+    <li><strong>6-second bumper:</strong> Jackpot amount + "Official Government Lottery" stamp + CTA. 3 variants per language.</li>
+    <li><strong>15-second skippable:</strong> Winner story format — 5s setup → 5s surprise → 5s resolution + download CTA. One real winner per state. 5 languages.</li>
+    <li><strong>30-second brand film:</strong> Day-in-life of aspirational working-class male discovering BookMyRajshree. 3 language versions. Flagship Phase 2 creative.</li>
+    <li><strong>60-second APK install tutorial (website embed):</strong> Screencast of real Android install. Hindi + Marathi. Not promotional — purely educational.</li>
+  </ul>
+
+  <h3>Compliance — What NOT to Say</h3>
+  <div class="co cw2"><p><span class="flag fw">⚠️ Copy Compliance — Mandatory for All Channels</span></p></div>
+  <div class="tw"><table>
+    <thead><tr><th>Do NOT Use</th><th>Use Instead</th></tr></thead>
+    <tbody>
+      <tr><td>"Guaranteed win"</td><td>"Government-guaranteed payouts to winners"</td></tr>
+      <tr><td>"Sure jackpot"</td><td>"Jackpot draw every day"</td></tr>
+      <tr><td>"Get rich quick"</td><td>"A chance to change your life"</td></tr>
+      <tr><td>Cash piles / luxury cars as primary CTA</td><td>Winner lifestyle shown responsibly</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:13px"><strong>Mandatory disclaimer on ALL creatives:</strong> "18+ only. Play responsibly. T&C apply. Lottery is permitted under Goa State Lotteries Act. Not available in all states."</p>
+</div>
+
+<!-- S8 -->
+<div class="sec" id="s8">
+  <div class="snum">Section 8</div>
+  <div class="stitle">Phased Rollout Plan</div>
+  <div class="esum">Three phases over 12–15 months: Test & Foundation, Scale, Optimise & Retain. Phase 2 cannot start until Phase 1 KPIs are met — this is a hard gate requiring leadership sign-off.</div>
+
+  <div class="pb p1">
+    <div class="pl">Phase 1 · Month 1–3</div>
+    <div class="pt">Foundation & Test — Build the Machine</div>
+    <div class="pbud">₹2.5 Crores</div>
+    <h4>Month 1 — Zero Paid Media (Pre-Launch)</h4>
+    <ul>
+      <li>APK download page rebuild (hard gate for Android paid media)</li>
+      <li>AppsFlyer full SDK integration and QA of all 8 events</li>
+      <li>Creative production: 3×15s videos, 2×6s bumpers, 10 static ads</li>
+      <li>WhatsApp Business API setup + retail QR code production</li>
+      <li>YouTube channel launch: 5 seed videos</li>
+      <li>Google + Meta certification applications submitted</li>
+    </ul>
+    <h4>Month 2–3 — Paid Media (Goa + Maharashtra only)</h4>
+    <ul>
+      <li>Apple Search Ads — brand + competitor keywords (₹20L)</li>
+      <li>Meta iOS installs / traffic objective (₹25L)</li>
+      <li>Google Search brand keywords (₹10L)</li>
+      <li>5 nano-influencers in Goa, 5 in Maharashtra (₹10L)</li>
+      <li>4 A/B tests running simultaneously on APK page</li>
+    </ul>
+    <h4>Phase 1 Gates (must achieve before Phase 2)</h4>
+    <ul>
+      <li>APK page ≥18% visit-to-download-click rate</li>
+      <li>All 8 AppsFlyer events firing correctly, fraud rate &lt;5%</li>
+      <li>At least 1 creative with CTR &gt;1.5% per segment</li>
+      <li>iOS CPI benchmarked &lt;₹250</li>
+      <li>1,000+ first purchases completed (LTV baseline data)</li>
+    </ul>
+  </div>
+
+  <div class="pb p2">
+    <div class="pl">Phase 2 · Month 4–9</div>
+    <div class="pt">Scale — Deploy Winning Channels Aggressively</div>
+    <div class="pbud">₹7.5 Crores</div>
+    <ul>
+      <li>Scale all Phase 1 channels that met CPI targets — 3–5x budget increase</li>
+      <li>Launch Android paid media (Meta + ShareChat) — only now that APK page is optimised</li>
+      <li>Launch YouTube paid pre-roll (post-Google certification)</li>
+      <li>Launch affiliate network — 5 empanelled publishers</li>
+      <li>Macro influencer partnerships (2 × MH, 1 × Goa) — Phase 2 launch blast</li>
+      <li>Geo expansion: Assam, West Bengal, Nagaland, Punjab</li>
+      <li>Lookalike audiences activated (Meta 1% from purchase events)</li>
+    </ul>
+    <h4>Phase 2 KPI Targets</h4>
+    <ul>
+      <li>50,000+ total installs/month by Month 6</li>
+      <li>Blended CPT &lt;₹2,000</li>
+      <li>APK install completion rate &gt;45% from download click</li>
+      <li>D7 retention &gt;25%</li>
+    </ul>
+  </div>
+
+  <div class="pb p3">
+    <div class="pl">Phase 3 · Month 10–15</div>
+    <div class="pt">Optimise & Retain — Maximise LTV</div>
+    <div class="pbud">₹5 Crores</div>
+    <ul>
+      <li>Shift budget toward re-engagement (lapsed users are cheapest to reactivate)</li>
+      <li>Lookalike scaling — 2–3% audiences from large purchase cohort</li>
+      <li>ASO round 2 based on keyword ranking data from Phase 2</li>
+      <li>SEO begins contributing meaningful organic traffic (Month 9–10 base)</li>
+      <li>WhatsApp community activation for retention</li>
+      <li>Loyalty offers to users approaching 1-year anniversary</li>
+    </ul>
+    <h4>Phase 3 KPI Targets</h4>
+    <ul>
+      <li>D30 retention &gt;35%</li>
+      <li>CAC:LTV ratio &gt;1:3</li>
+      <li>Repeat purchase rate &gt;40% of registered users</li>
+      <li>Organic installs &gt;30% of total (SEO + WOM + referral)</li>
+    </ul>
+  </div>
+
+  <h3>Monthly Budget Deployment</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Month</th><th>Phase</th><th>Budget (₹L)</th><th>Primary Activities</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Month 1</td><td>1</td><td class="tg">25L</td><td>Pre-launch: APK page rebuild, AppsFlyer setup, creative production, YouTube launch</td></tr>
+      <tr><td class="tn">Month 2</td><td>1</td><td class="tg">50L</td><td>ASA live, Meta iOS traffic, Google Search brand, nano-influencers</td></tr>
+      <tr><td class="tn">Month 3</td><td>1</td><td class="tg">75L</td><td>Scale winning creatives, A/B test conclusions, affiliate onboarding</td></tr>
+      <tr><td class="tn">Month 4</td><td>2</td><td class="tg">100L</td><td>Phase 2 launch — Android paid media (Meta + ShareChat), affiliate live</td></tr>
+      <tr><td class="tn">Month 5</td><td>2</td><td class="tg">120L</td><td>YouTube paid, macro influencer campaigns, geo expansion begins</td></tr>
+      <tr><td class="tn">Month 6</td><td>2</td><td class="tg">150L</td><td>Peak scale — all channels live, lookalike audiences active, NE India</td></tr>
+      <tr><td class="tn">Month 7</td><td>2</td><td class="tg">150L</td><td>Maintain peak — optimise underperformers, increase affiliate budget</td></tr>
+      <tr><td class="tn">Month 8</td><td>2</td><td class="tg">120L</td><td>Efficiency push — pause low-ROI channels, increase top 3 channels</td></tr>
+      <tr><td class="tn">Month 9</td><td>2</td><td class="tg">110L</td><td>Retargeting start, festival season push, programmatic</td></tr>
+      <tr><td class="tn">Month 10</td><td>3</td><td class="tg">100L</td><td>Phase 3: retention focus, ASO round 2, SEO begins contributing</td></tr>
+      <tr><td class="tn">Month 11</td><td>3</td><td class="tg">80L</td><td>LTV optimisation, WhatsApp community, D30/D90 cohort action</td></tr>
+      <tr><td class="tn">Month 12</td><td>3</td><td class="tg">70L</td><td>Sustained retention spend, referral program launch</td></tr>
+      <tr><td><strong>Total</strong></td><td></td><td class="tg"><strong>₹1,150L</strong></td><td>Working media (76.7% of ₹15 Cr)</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<!-- S9 -->
+<div class="sec" id="s9">
+  <div class="snum">Section 9</div>
+  <div class="stitle">Budget Breakdown — ₹15 Crores</div>
+  <div class="esum">₹15 Crores deployed over 12–15 months. Working media (₹12 Cr / 80%) directly drives installs and conversions. Non-working spend (₹3 Cr / 20%) covers creative, technology, and contingency — leverage multipliers on working media.</div>
+
+  <h3>Channel-Wise Budget Allocation</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Channel</th><th>Budget (₹)</th><th>%</th><th>Est. Installs</th><th>Est. CPT</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Meta Ads</td><td class="tg">₹2,80,00,000</td><td>18.7%</td><td>90,000</td><td>₹1,900</td></tr>
+      <tr><td class="tn">Google (Search + UAC)</td><td class="tg">₹2,20,00,000</td><td>14.7%</td><td>70,000</td><td>₹2,100</td></tr>
+      <tr><td class="tn">YouTube Paid</td><td class="tg">₹1,30,00,000</td><td>8.7%</td><td>40,000</td><td>₹2,200</td></tr>
+      <tr><td class="tn">Apple Search Ads</td><td class="tg">₹60,00,000</td><td>4.0%</td><td>25,000</td><td>₹1,500</td></tr>
+      <tr><td class="tn">Influencer Marketing</td><td class="tg">₹1,20,00,000</td><td>8.0%</td><td>50,000</td><td>₹1,600</td></tr>
+      <tr><td class="tn">Affiliate Network</td><td class="tg">₹1,50,00,000</td><td>10.0%</td><td>60,000</td><td>₹1,700</td></tr>
+      <tr><td class="tn">ShareChat + Moj</td><td class="tg">₹80,00,000</td><td>5.3%</td><td>35,000</td><td>₹2,000</td></tr>
+      <tr><td class="tn">Programmatic</td><td class="tg">₹70,00,000</td><td>4.7%</td><td>25,000</td><td>₹2,400</td></tr>
+      <tr><td class="tn">WhatsApp Marketing</td><td class="tg">₹30,00,000</td><td>2.0%</td><td>20,000</td><td>₹1,200</td></tr>
+      <tr><td class="tn">SEO Content</td><td class="tg">₹40,00,000</td><td>2.7%</td><td>30,000 organic</td><td>₹200</td></tr>
+      <tr><td class="tn">Push Notifications</td><td class="tg">₹20,00,000</td><td>1.3%</td><td>15,000 reactivation</td><td>₹400</td></tr>
+      <tr><td><strong>Total Working Media</strong></td><td class="tg"><strong>₹12,00,00,000</strong></td><td><strong>80%</strong></td><td><strong>4,60,000+</strong></td><td><strong>₹1,800 blended</strong></td></tr>
+      <tr><td>Creative Production</td><td>₹1,20,00,000</td><td>8%</td><td>—</td><td>—</td></tr>
+      <tr><td>AppsFlyer + Tech Stack</td><td>₹40,00,000</td><td>2.7%</td><td>—</td><td>—</td></tr>
+      <tr><td>Website APK Rebuild</td><td>₹30,00,000</td><td>2%</td><td>—</td><td>—</td></tr>
+      <tr><td>Agency + Analytics</td><td>₹60,00,000</td><td>4%</td><td>—</td><td>—</td></tr>
+      <tr><td>Contingency (10%)</td><td>₹1,50,00,000</td><td>10%</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>GRAND TOTAL</strong></td><td class="tg"><strong>₹15,00,00,000</strong></td><td><strong>100%</strong></td><td><strong>4.5L+ installs</strong></td><td></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>CPI Benchmarks — India Lottery Apps</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Install Type</th><th>Low</th><th>High</th><th>This Plan Target</th><th>Why the Difference</th></tr></thead>
+    <tbody>
+      <tr><td class="tn">Android APK (via website)</td><td>₹150</td><td>₹500</td><td>₹220–280</td><td>Higher friction — Unknown Sources warning, multi-step funnel</td></tr>
+      <tr><td class="tn">iOS App Store</td><td>₹120</td><td>₹350</td><td>₹160–220</td><td>Standard funnel, cleaner attribution, higher device quality</td></tr>
+      <tr><td class="tn">Cost Per Registration</td><td>₹300</td><td>₹900</td><td>₹500–650</td><td>Drop-off between install and OTP registration</td></tr>
+      <tr><td class="tn">Cost Per First Purchase</td><td>₹1,000</td><td>₹3,500</td><td>₹1,500–1,800</td><td>~35–40% of registrations convert within 30 days</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="co ci"><p><strong>Scale vs Pause Rules:</strong> Scale a channel if 30-day CPT ≤₹2,000 and D7 retention ≥20%. Pause if CPT exceeds ₹3,500 or D7 retention below 12%. Apply at every weekly review from Month 2.</p></div>
+</div>
+
+<!-- S10 -->
+<div class="sec" id="s10">
+  <div class="snum">Section 10</div>
+  <div class="stitle">Risks & Mitigation</div>
+  <div class="esum">Five material risks could compromise execution. Ad account bans are the highest probability risk. The APK trust barrier is the highest impact risk. Attribution gaps are manageable through proper AppsFlyer implementation.</div>
+
+  <div class="rk">
+    <div class="rt">🔴 Risk 1: Ad Account Bans (Meta & Google)</div>
+    <div class="rb">Meta and Google can suspend accounts running lottery advertising without proper certification. A ban during peak Phase 2 spend could cost ₹50–150L in lost efficiency and months of rebuilding.</div>
+    <div class="mi">Apply for gambling certification on both platforms in Week 1. Maintain a backup Meta Business Manager account. Keep copies of all creative approvals. Appoint a compliance reviewer. Build a 30-day creative bank in advance so a ban doesn't stop delivery.</div>
+  </div>
+
+  <div class="rk">
+    <div class="rt">🔴 Risk 2: APK Trust Barrier — User Psychology</div>
+    <div class="rb">The "Unknown Sources" security warning is a genuine psychological barrier. Many users have been warned about APK scams. If not pre-empted, conversion rates will be 5–10% instead of 20–25%, making Android acquisition 3–4x more expensive than modelled.</div>
+    <div class="mi">Enforce APK page rebuild as hard pre-launch gate. Deploy WhatsApp-assisted onboarding. Brief influencers to address "is this safe?" proactively. Include Govt of Goa seal prominently. Publish a "Security FAQ" explaining why the app is not on Play Store (policy, not safety).</div>
+  </div>
+
+  <div class="rk">
+    <div class="rt">🟡 Risk 3: Legal / Compliance Risk by State</div>
+    <div class="rb">India's lottery legal framework is a patchwork of state laws. Inadvertently reaching users in banned states could trigger legal action.</div>
+    <div class="mi">Geo-fence ALL paid campaigns — only target legal states. Use IP-based geo-blocking on website. Retain gaming/lottery legal counsel for quarterly compliance review. Monitor any changes in state lottery legislation quarterly.</div>
+  </div>
+
+  <div class="rk">
+    <div class="rt">🟡 Risk 4: Attribution Gaps for APK Installs</div>
+    <div class="rb">Without Google Play referrer, 20–30% of Android installs may be unattributed in early weeks, causing budget misallocation.</div>
+    <div class="mi">Implement AppsFlyer Custom Store tracking and probabilistic attribution in Week 1 — QA before any paid media launches. Accept ~70–80% accuracy vs ~95% for Play Store. Use UTM + AppsFlyer for cross-validation. Don't optimise until 1,000+ installs tracked per channel.</div>
+  </div>
+
+  <div class="rk">
+    <div class="rt">🟡 Risk 5: Budget Burn Without Conversion</div>
+    <div class="rb">Scaling paid media too early (before APK page and creative are optimised) is the most common — and expensive — mistake in app launch marketing.</div>
+    <div class="mi">Enforce Phase Gate reviews requiring leadership sign-off. Set hard budget caps with automated alerts when daily CPT exceeds 2x target. Pause any channel if 7-day rolling CPT exceeds ₹3,500. Early failure indicators: CTR &lt;0.4%, registration rate &lt;20%, D1 retention &lt;30%.</div>
+  </div>
+
+  <div class="co cs"><p><strong>Overall Risk Rating: Medium-High, Manageable.</strong> All five risks are mitigable through disciplined process and phased spending. The conservative Phase 1 approach exists precisely to de-risk the larger Phase 2 commitment. A rigorous Phase 1 gate review is the single most important risk management action in this document.</p></div>
+</div>
+
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const ids=['exec','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
+  const i=ids.indexOf(id);
+  if(i>=0)document.querySelectorAll('.nb')[i].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
